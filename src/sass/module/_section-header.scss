@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.section-header {
+    text-align: center;
+}
+
+.section-header__title {
+    font-family: 'Gotu', sans-serif;
+    font-size: rem(32);
+    line-height: 1.25;
+    color: $green;
+    font-weight: $normal;
+    @include mq(md){
+        font-size: rem(40);
+        line-height: 1;
+    }
+}
+.section-header__title-white {
+    font-family: 'Gotu', sans-serif;
+    font-size: rem(32);
+    line-height: 1.25;
+    color: $white;
+    font-weight: $normal;
+    @include mq(md){
+        font-size: rem(40);
+        line-height: 1;
+    }
+}
+
+.section-header__title span {
+    color: $green-accent
+
+}
+
+.section-header__subtitle {
+    color: $green-accent;
+    font-size: rem(12);
+    line-height: 1.5;
+    font-weight: $normal;
+}
+.section-header__subtitle-white {
+    color: $white;
+    font-size: rem(12);
+    line-height: 1.5;
+    font-weight: $normal;
+}
+
+// contact title
+.section-header__title-contact {
+    font-family: 'Gotu', sans-serif;
+    font-size: rem(80);
+    line-height: 1;
+    color: $green;
+    font-weight: $normal;
+}
+
+.section-header__title-contact span {
+    color: $green-accent
+
+}
+
+.section-header__subtitle-contact {
+    color: $green-accent;
+    font-size: rem(12);
+    line-height: 1.5;
+    font-weight: $normal;
+}

@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.campaign {
+
+}
+
+.campaign__inner {
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(120);
+    }
+}
+
+.campaign__container{
+    position: relative;
+}
+
+
+
+.campaign__btn{
+    text-align: center;
+}
+
+.mySwiper-campaign{
+    padding-left: rem(15);
+    padding-bottom: rem(40);
+    padding-top: rem(24);
+    @include mq(md){
+        padding-left: rem(180);
+        padding-bottom: rem(80);
+        padding-top: rem(40);
+    }
+}
+
+
+//ナビゲーション
+.swiper-button{
+    @include mq(md){
+    position: absolute;
+    top: 0;
+    right: 30%;
+}
+}
+.swiper-button-next{
+    @include mq(md){
+    width: rem(80);
+    height: rem(80);
+    top: -50px;
+    right: -250px;
+    }
+}
+.swiper-button-prev{
+    @include mq(md){
+    width: rem(80);
+    height: rem(80);
+    top: -50px;
+    }
+}
+
+
+
+.swiper-button-next::after{
+    @include mq(md){
+    content: "";
+    background-image: url(../images/common/campaign/campaign-next.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(80);
+    height: rem(80);
+    }
+
+}
+
+.swiper-button-prev::after{
+    @include mq(md){
+    background-image: url(../images/common/campaign/campaign-prev.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(80);
+    height: rem(80);
+    }
+}

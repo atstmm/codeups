@@ -1,0 +1,21 @@
+@use "global" as *;
+
+body{
+    position: relative;
+}
+
+.page-top {
+    width: rem(48);
+    height: rem(48);
+    position: fixed;
+    bottom: rem(15);
+    right: rem(15);
+    z-index: 100;
+    @include mq(md){
+        width: rem(80);
+        height: rem(80);
+        bottom: rem(20);
+        right: rem(20);
+    }
+}
+

@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.footer {
+    background: $green-accent;
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+    @include mq(md){
+        padding-top: rem(80);
+        padding-bottom: rem(80);
+    }
+}
+
+.footer__inner {
+    
+}
+
+.footer__contain {
+    @include mq(md){
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.footer__logo {
+    max-width: rem(120);
+    width: 100%;
+    @include mq(md){
+        max-width: rem(200);
+    }
+}
+
+.footer__icon {
+    display: flex;
+    padding-top: rem(16);
+}
+
+.footer__icon--facebook {
+    width: rem(24);
+    height: rem(24);
+    @include mq(md){
+        margin-left: rem(40);
+        width: rem(32);
+        height: rem(32);
+    }
+}
+
+.footer__icon--instagram {
+    width: rem(24);
+    height: rem(24);
+    margin-left: rem(16);
+    @include mq(md){
+        width: rem(32);
+        height: rem(32);
+    }
+}
+
+.footer__nav {
+
+}
+
+.footer__nav--pc {
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.footer__wrapper{
+    @include mq(md){
+    padding-right: rem(120);
+    }
+}
+
+
+.Copyright {
+    padding-top: rem(40);
+    font-size: rem(12);
+    font-family: $english-font-family;
+    color: $white;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: $normal;
+    width: 100%;
+    @include mq(md){
+        padding-top: rem(80);
+       font-size: rem(14);
+    }
+}
+

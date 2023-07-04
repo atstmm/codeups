@@ -1,0 +1,156 @@
+@use "global" as *;
+
+.contact {
+
+}
+
+.contact__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(100);
+    position: relative;
+    @include mq(md){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        margin-top: rem(140);
+        margin-bottom: rem(160);
+        max-width: rem(1080);
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: rem(80);
+    }
+}
+
+.contact__inner::after {
+    content: "";
+    background: url(../images/common/background/fish-left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: rem(109);
+    width: 100%;
+    height: rem(50);
+    position: absolute;
+    top: rem(54);
+    right: rem(15);
+    @include mq(md){
+        max-width: rem(301);
+        height: rem(138);
+        top: -10%;
+        right: -8.3%;
+    }
+}
+
+.contact__container-left {
+    @include mq(md){
+        width: 50%;
+        border-right: 1px solid $green-accent;
+    }
+}
+
+.contact__logo {
+    position: relative;
+    max-width: rem(174);
+    margin: auto;
+    @include mq(md){
+        max-width: rem(200);
+    }
+}
+
+.contact__logo::before {
+    content: "";
+    display: block;
+    padding-top: 37.3563218%;
+}
+
+.contact__logo img {
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width:100%;
+	height:100%;
+	object-fit: contain;
+
+}
+.contact__logo::after {
+    content: "";
+    display: block;
+    background: $green-accent;
+    width: rem(295);
+    height: rem(1);
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq(md){
+        width: rem(440);
+    }
+}
+
+.contact__access {
+    @include mq(md){
+        display: flex;
+        margin-top: rem(24);  
+       }
+}
+
+.contact__access-lists {
+    margin-top: rem(22);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(50);
+    }
+    }
+
+.contact__access-list {
+    color: $green;
+    font-size: rem(16);
+    line-height: 1.5;
+    font-weight: $normal;
+    text-align: center;
+    @include mq(md){
+        text-align: left;   
+    }
+}
+
+.contact__access-list+ .contact__access-list {
+    padding-top: rem(4);
+}
+
+
+.contact__access-map {
+    max-width: rem(295);
+    margin: rem(16) auto rem(40) auto;
+    @include mq(md){
+        max-width: rem(273);
+        margin: 0 0 0 rem(20);
+       }
+}
+
+.contact__container-right {
+    @include mq(md){
+        width: 50%;
+        align-items: center;
+    }
+}
+
+.contact__title {
+
+}
+
+.contact__text {
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: 1.28571429;
+    color: $green-accent;
+    text-align: center;
+    padding-top: rem(8);
+}
+
+.contact__btn {
+    margin-top: rem(40);
+    text-align: center;
+}
+

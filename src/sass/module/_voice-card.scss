@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.voice-card {
+    max-width: rem(345);
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    padding: rem(16) rem(16) rem(24) rem(16);
+    @include mq(md){
+        max-width: rem(520);
+        padding: rem(24);
+    }
+}
+
+.voice-card__heading {
+    display: flex;
+}
+
+.voice-card__lead {
+    @include mq(md){
+        width: 60%;
+    }
+}
+
+.voice-card__lists {
+    @include mq(md){
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding-top: rem(24);
+    }
+}
+
+.voice-card__list {
+    font-size: rem(12);
+    line-height: 1.5;
+    font-weight: $normal;
+    color: $green;
+}
+
+.voice-card__tag {
+    display: inline-block;
+    font-size: rem(12);
+    color: $green-accent;
+    line-height: 1.83333;
+    font-weight: $normal;
+    border: 1px solid $green-accent;
+    padding: rem(4) rem(12);
+}
+
+
+.voice-card__title {
+    font-size: rem(16);
+    line-height: 1.4375;
+    font-weight: $normal;
+    padding-top: rem(4);
+    font-weight: 500;
+    color: $green;
+    position: relative;
+    @include mq(md){
+        padding-top: rem(8);
+        font-size: rem(24);
+    }
+}
+
+.voice-card__title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $green-accent;
+    bottom: -4px;
+    left: 0;
+}
+
+.voice-card__img {
+    padding-top: rem(8);
+    padding-left: rem(13);
+    @include mq(md){
+        padding-left: rem(16);
+        width: 39%;
+    }
+
+}
+
+.voice-card__text {
+    padding-top: rem(15);
+    font-weight: $normal;
+    font-size: rem(16);
+    color: $green;
+    @include mq(md){
+        line-height: 1.5;
+        padding-top: rem(40);
+    }
+}
+

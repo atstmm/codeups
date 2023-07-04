@@ -1,0 +1,71 @@
+    @use "global" as *;
+
+.nav {
+  background-color: $green-accent;
+}
+
+.nav__items {
+    display: flex;
+    
+}
+
+.nav__items--right {
+    padding-left: rem(22);
+}
+
+.nav__item {
+    font-size: rem(16);
+    font-weight: $bold;
+    color: $white;
+    line-height: 1.125;
+    padding-top: rem(40);
+    @include mq(md){
+        white-space: nowrap
+    }
+    
+}
+
+.nav__item--icon {
+    display: inline-block;
+    font-size: rem(16);
+    font-weight: $bold;
+    color: $white;
+    line-height: 1.125;
+    position: relative;
+}
+
+.nav__item--icon::before {
+    content: "";
+    background: url(../images/common/nav/nav-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(18);
+    height: rem(18);
+    position: absolute;
+    top: 0;
+    left: -22px;
+
+}
+
+
+
+.nav__sub-items {
+    @include mq(md){
+        white-space: nowrap
+    }
+
+}
+
+.nav__sub-item {
+    font-size: rem(16);
+    font-weight: $normal;
+    color: $white;
+    line-height: 1.125;
+    padding-top: rem(24);
+}
+
+.nav__items--left {
+    padding-left: rem(38);
+}
+
+
