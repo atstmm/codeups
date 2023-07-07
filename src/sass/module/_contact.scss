@@ -1,8 +1,5 @@
 @use "global" as *;
 
-.contact {
-
-}
 
 .contact__inner {
     padding-top: rem(82);
@@ -123,6 +120,7 @@
     line-height: 1.5;
     font-weight: $normal;
     text-align: center;
+    font-family: $base-font-family;
     @include mq(md){
         text-align: left;   
     }
@@ -138,7 +136,7 @@
     margin: rem(16) auto rem(49) auto;
     @include mq(md){
         max-width: rem(273);
-        margin: 0 0 0 rem(7);
+        margin: 0 0 0 rem(22);
        }
 }
 

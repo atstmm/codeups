@@ -43,9 +43,6 @@
     }
 }
 
-.voice__title {
-
-}
 
 .voice__items {
     display: flex;
@@ -65,7 +62,7 @@
     }
 }
 .voice__item + .voice__item{
-    margin-top: rem(38);
+    margin-top: rem(39);
     @include mq(md){
         margin-top: 0;
     }

@@ -35,7 +35,6 @@
     line-height: 1.5;
     font-weight: $normal;
     color: $green;
-    letter-spacing: -0.05em;
 }
 
 .voice-card__tag {
@@ -45,7 +44,7 @@
     line-height: 1.78;
     font-weight: $normal;
     border: 1px solid $green-accent;
-    padding: rem(3) rem(12);
+    padding: rem(3) rem(11);
     @include mq(md){
         padding: rem(5) rem(16);
     }
@@ -81,7 +80,7 @@
 
 .voice-card__img {
     margin-top: rem(8);
-    margin-left: rem(4);
+    margin-left: rem(5);
     @include mq(md){
         margin-left: rem(16);
         width: 39%;

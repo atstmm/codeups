@@ -71,7 +71,7 @@
     bottom: -8px;
     left: 0;
     @include mq(md){
-        bottom: -9px;
+        bottom: -7px;
     }
 }
 
@@ -93,6 +93,9 @@
     justify-content: center;
     align-items: center;
     padding-top: rem(5);
+    @include mq(md){
+        padding-top: rem(2);
+    }
 }
 
 .campaign-card__price--small {

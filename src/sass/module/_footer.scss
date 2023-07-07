@@ -10,8 +10,6 @@
     }
 }
 
-.footer__inner {
-}
 
 .footer__contain {
     @include mq(md){
@@ -30,7 +28,7 @@
 
 .footer__icon {
     display: flex;
-    padding-top: rem(18);
+    padding-top: rem(16);
     @include mq(md){
         padding-bottom: rem(5);
     }
@@ -56,9 +54,7 @@
     }
 }
 
-.footer__nav {
 
-}
 
 .footer__nav--pc {
     @include mq(md){
@@ -68,7 +64,7 @@
 
 .footer__wrapper{
     @include mq(md){
-    padding-right: rem(141);
+    padding-right: rem(142);
     }
 }
 

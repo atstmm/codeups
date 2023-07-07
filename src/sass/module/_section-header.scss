@@ -15,21 +15,21 @@
         line-height: 1;
     }
 }
-.section-header__title-white {
-    font-family: 'Gotu', sans-serif;
-    font-size: rem(32);
-    line-height: 1.25;
-    color: $white;
-    font-weight: $normal;
+.is-white {
     @include mq(md){
-        font-size: rem(40);
-        line-height: 1;
+        color: $white;
     }
 }
 
 .section-header__title span {
     color: $green-accent
 
+}
+
+.is-white span{
+    @include mq(md){
+        color: $white;
+    }
 }
 
 .section-header__subtitle {
@@ -42,13 +42,9 @@
         padding-top: rem(8);
     }
 }
-.section-header__subtitle-white {
-    color: $white;
-    font-size: rem(12);
-    line-height: 1.5;
-    font-weight: $normal;
+.is-white {
     @include mq(md){
-        padding-top: rem(8);
+        color: $white;
     }
 }
 

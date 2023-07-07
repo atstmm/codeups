@@ -7,7 +7,7 @@
 .nav__items {
     display: flex;
     @include mq(md){
-        margin-top: rem(26);
+        margin-top: rem(25);
     }
 }
 
@@ -76,11 +76,10 @@
     color: $white;
     line-height: 1.125;
     padding-top: rem(24);
-    letter-spacing: 0.02em;
 }
 
 .nav__items--left {
-    padding-left: rem(39);
+    padding-left: rem(40);
     @include mq(md){
         padding-left: 0;
     }
