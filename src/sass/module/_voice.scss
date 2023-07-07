@@ -5,11 +5,11 @@
 }
 
 .voice__inner {
-    padding-top: rem(80);
-    padding-bottom: rem(80);
+    padding-top: rem(84);
+    padding-bottom: rem(84);
     @include mq(md){
-        padding-top: rem(140);
-        padding-bottom: rem(140);
+        padding-top: rem(144);
+        padding-bottom: rem(144);
         position: relative;
     }
 }
@@ -24,8 +24,8 @@
         width: 100%;
         height: rem(138);
         position: absolute;
-        top: 2%;
-        left: -3.8%;
+        top: 2.8%;
+        left: -4.9%;
     }
 }
 .voice__inner::after{
@@ -39,7 +39,7 @@
         height: rem(162);
         position: absolute;
         bottom: 8%;
-        right: 2%;
+        right: 2.3%;
     }
 }
 
@@ -52,20 +52,27 @@
     flex-direction: column;
     align-items: center;
     @include mq(md){
+        margin-top: rem(30);
         flex-direction: row;
         gap: rem(40);
     }
 }
 
 .voice__item {
-    margin-top: rem(40);
+    margin-top: rem(43);
     @include mq(md){
-        margin-top: rem(30);
+        margin-top: 0;
+    }
+}
+.voice__item + .voice__item{
+    margin-top: rem(38);
+    @include mq(md){
+        margin-top: 0;
     }
 }
 
 .voice__btn {
-    margin-top: rem(40);
+    margin-top: rem(38);
     text-align: center;
     @include mq(md){
         margin-top: rem(80);

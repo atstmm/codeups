@@ -1,6 +1,10 @@
 @use "global" as *;
 
+html{
+    overflow-x: hidden;
+}
 body{
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -10,7 +14,7 @@ body{
     position: fixed;
     bottom: rem(15);
     right: rem(15);
-    z-index: 100;
+    z-index: 200;
     @include mq(md){
         width: rem(80);
         height: rem(80);
@@ -19,3 +23,6 @@ body{
     }
 }
 
+.page-top_btn{
+
+}

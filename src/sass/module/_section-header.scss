@@ -37,23 +37,32 @@
     font-size: rem(12);
     line-height: 1.5;
     font-weight: $normal;
+    padding-top: rem(4);
+    @include mq(md){
+        padding-top: rem(8);
+    }
 }
 .section-header__subtitle-white {
     color: $white;
     font-size: rem(12);
     line-height: 1.5;
     font-weight: $normal;
+    @include mq(md){
+        padding-top: rem(8);
+    }
 }
 
 // contact title
 .section-header__title-contact {
     font-family: 'Gotu', sans-serif;
     font-size: rem(80);
-    line-height: 1;
+    line-height: 0.8;
     color: $green;
     font-weight: $normal;
+    @include mq(md){
+        line-height: 0.87;
+    }
 }
-
 .section-header__title-contact span {
     color: $green-accent
 
@@ -64,4 +73,6 @@
     font-size: rem(12);
     line-height: 1.5;
     font-weight: $normal;
+    
+    
 }

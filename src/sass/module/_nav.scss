@@ -6,7 +6,9 @@
 
 .nav__items {
     display: flex;
-    
+    @include mq(md){
+        margin-top: rem(26);
+    }
 }
 
 .nav__items--right {
@@ -20,9 +22,21 @@
     line-height: 1.125;
     padding-top: rem(40);
     @include mq(md){
-        white-space: nowrap
+        white-space: nowrap;
+        padding-top: 0;
     }
     
+}
+.nav__item + .nav__item {
+    @include mq(md){
+    padding-top: rem(40);
+    }
+}
+
+.nav__sub-items + .nav__item{
+    @include mq(md){
+        padding-top: rem(40);
+    }
 }
 
 .nav__item--icon {
@@ -62,10 +76,14 @@
     color: $white;
     line-height: 1.125;
     padding-top: rem(24);
+    letter-spacing: 0.02em;
 }
 
 .nav__items--left {
-    padding-left: rem(38);
+    padding-left: rem(39);
+    @include mq(md){
+        padding-left: 0;
+    }
 }
 
 

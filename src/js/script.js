@@ -38,10 +38,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     slidesPerView: 1.25,
     spaceBetween: 24,
     breakpoints: {
+      560: {
+        slidesPerView: 2.3,
+        spaceBetween: 30,
+      },
       768: {
-        slidesPerView: 3.5,
+        slidesPerView: 2.5,
         spaceBetween: 40,
-        autoplay: false
+      },
+      900: {
+        slidesPerView: 2.8,
+        spaceBetween: 40,
+      },
+      1300: {
+        slidesPerView: 3.5,
+        spaceBetween: 43,
+        
+      },
+      1600: {
+        slidesPerView: 4.5,
+        spaceBetween: 43,
       },
     },
     navigation: {

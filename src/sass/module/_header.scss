@@ -6,19 +6,32 @@
     z-index: 100;
     position: sticky;
     top: 0;
+    @include mq(md){
+        height: rem(90);
+    }
 }
 
 .header__inner {
+    padding-left: rem(15);
+    padding-right: rem(15);
     height: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mq(md){
+        padding-left: rem(40);
+        padding-right: rem(40);
+    }
 }
 
 .header__logo {
     padding-top: rem(21);
     padding-bottom: rem(21);
     z-index: 1000;
+    @include mq(md){
+        
+    }
+
 }
 
 .header__logo-link {
@@ -28,6 +41,9 @@
 
 .header__logo img{
    max-width: rem(102);
+   @include mq(md){
+    max-width: rem(133);
+   }
 }
 
 .header__hamburger {
@@ -54,11 +70,11 @@
     left: 0;
 }
 .header__hamburger-line:nth-child(2) {
-    top: calc(50% - 1px);
+    top: 50%;
     left: 0;
 }
 .header__hamburger-line:nth-child(3) {
-    top: calc(100% - 1px);
+    top: 100%;
     left: 0;
 }
 
@@ -110,6 +126,7 @@
 .header__menu--lists {
     display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 .header__menu--list {
@@ -121,14 +138,12 @@
     font-family: $english-font-family;
     font-size: rem(18);
     color: $white;
-    line-height: 1;
     cursor: pointer;
 }
 .header__menu--listLink::after{
     font-size: rem(10);
     width: 100%;
     text-align: center;
-    padding-top: rem(4);
     display: block;
 }
 
@@ -154,7 +169,7 @@
     content: "よくある質問";
 }
 .header-contact::after{
-    content: "お問合せ";
+    content: "お問い合わせ";
 }
 
 .header__menu--listLink::before{

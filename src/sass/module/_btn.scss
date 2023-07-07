@@ -8,7 +8,7 @@
     background-color: $green-accent;
     color: $white;
     font-weight: $normal;
-    padding: rem(16) rem(88) rem(16) rem(40);
+    padding: rem(16) rem(92) rem(16) rem(37);
     line-height: 1.571;
     cursor: pointer;
     transition: .3s;
@@ -19,14 +19,14 @@
 .btn::after {
     content: "";
     display: inline-block;
-    background-image: url(../images/common/btn/btn-white.png);
+    background-image: url(../images/common/btn/btn-white1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     position: absolute;
     top: calc(50% - rem(6));
-    right: rem(40);
-    width: rem(40);
+    right: rem(35);
+    width: rem(50);
     height: rem(6);
 }
 

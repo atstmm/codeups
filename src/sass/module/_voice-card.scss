@@ -7,7 +7,7 @@
     padding: rem(16) rem(16) rem(24) rem(16);
     @include mq(md){
         max-width: rem(520);
-        padding: rem(24);
+        padding: rem(17) rem(24) rem(23) rem(24);
     }
 }
 
@@ -26,7 +26,7 @@
         display: flex;
         justify-content: space-between;
         align-items: end;
-        padding-top: rem(24);
+        padding-top: rem(31);
     }
 }
 
@@ -35,16 +35,20 @@
     line-height: 1.5;
     font-weight: $normal;
     color: $green;
+    letter-spacing: -0.05em;
 }
 
 .voice-card__tag {
     display: inline-block;
     font-size: rem(12);
     color: $green-accent;
-    line-height: 1.83333;
+    line-height: 1.78;
     font-weight: $normal;
     border: 1px solid $green-accent;
-    padding: rem(4) rem(12);
+    padding: rem(3) rem(12);
+    @include mq(md){
+        padding: rem(5) rem(16);
+    }
 }
 
 
@@ -57,7 +61,7 @@
     color: $green;
     position: relative;
     @include mq(md){
-        padding-top: rem(8);
+        padding-top: rem(10);
         font-size: rem(24);
     }
 }
@@ -65,25 +69,28 @@
 .voice-card__title::after{
     content: "";
     position: absolute;
-    width: 100%;
+    width: 95%;
     height: 1px;
     background-color: $green-accent;
     bottom: -4px;
     left: 0;
+    @include mq(md){
+        width: 100%;
+    }
 }
 
 .voice-card__img {
-    padding-top: rem(8);
-    padding-left: rem(13);
+    margin-top: rem(8);
+    margin-left: rem(4);
     @include mq(md){
-        padding-left: rem(16);
+        margin-left: rem(16);
         width: 39%;
     }
 
 }
 
 .voice-card__text {
-    padding-top: rem(15);
+    padding-top: rem(17);
     font-weight: $normal;
     font-size: rem(16);
     color: $green;

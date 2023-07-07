@@ -6,10 +6,10 @@
 
 .price__inner {
     padding-top: rem(80);
-    padding-bottom: rem(80);
+    padding-bottom: rem(83);
     @include mq(md){
         padding-top: rem(100);
-        padding-bottom: rem(100);
+        padding-bottom: rem(104);
         position: relative;
     }
 }
@@ -43,7 +43,7 @@
 }
 
 .price__img-sp {
-    margin-top: rem(24);
+    margin-top: rem(28);
 }
 .price__img-pc {
     margin-top: rem(40);
@@ -59,6 +59,9 @@
 }
 
 .price__item {
+    margin-top: rem(41);
+}
+.price__item + .price__item {
     margin-top: rem(40);
 }
 
@@ -92,6 +95,10 @@
     font-size: rem(14);
     font-weight: $normal;
     line-height: 1.71428571;
+    letter-spacing: 0.02em;
+    @include mq(md){
+        letter-spacing: 0.155em;
+    }
 }
 
 .price__item-price {
@@ -99,10 +106,14 @@
     font-size: rem(14);
     font-weight: $normal;
     line-height: 1.71428571;
+    letter-spacing: -0.07em;
+    @include mq(md){
+        letter-spacing: 0;
+    }
 }
 
 .price__btn {
-    margin-top: rem(40);
+    margin-top: rem(39);
     text-align: center;
     @include mq(md){
         margin-top: rem(80);

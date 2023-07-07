@@ -5,7 +5,7 @@
 }
 
 .campaign__inner {
-    margin-top: rem(40);
+    margin-top: rem(41);
     @include mq(md){
         margin-top: rem(120);
     }
@@ -24,7 +24,7 @@
 .mySwiper-campaign{
     padding-left: rem(15);
     padding-bottom: rem(40);
-    padding-top: rem(24);
+    padding-top: rem(28);
     @include mq(md){
         padding-left: rem(180);
         padding-bottom: rem(80);
@@ -45,7 +45,7 @@
     @include mq(md){
     width: rem(80);
     height: rem(80);
-    top: -50px;
+    top: -43px;
     right: -250px;
     }
 }
@@ -53,7 +53,7 @@
     @include mq(md){
     width: rem(80);
     height: rem(80);
-    top: -50px;
+    top: -43px;
     }
 }
 
