@@ -25,7 +25,9 @@
 .blog__items {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     @include mq(md){
         flex-direction: row;
         gap: rem(40);
