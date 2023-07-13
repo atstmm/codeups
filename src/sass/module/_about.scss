@@ -17,12 +17,13 @@
     background: url(../images/common/background/sango.png);
     background-repeat: no-repeat;
     background-size: contain;
-    max-width: (194);
-    width: 100%;
+    background-position: bottom right;
+    aspect-ratio: 194 / 181;
+    width: rem(194);
     height: rem(181);
     position: absolute;
     bottom: 5.5%;
-    right: -89%;
+    right: -6%;
     z-index: 2;
     }
 }
@@ -39,12 +40,12 @@
 }
 
 .about__img-left {
-    max-width: rem(128);
-    width: 100%;
+    width: 45%;
     position: relative;
     z-index: 1;
     @include mq(md){
         max-width: rem(400);
+        width: 100%;
     }
 }
 .about__img-left::before{
@@ -59,13 +60,13 @@
 	transform: translate(-50%,-50%);
 	width:100%;
 	height:100%;
-	object-fit: contain;
+	object-fit: cover;
 }
 
 .about__img-right {
     margin-left: -64px;
     margin-top: rem(24);
-    max-width: rem(281);
+    // max-width: rem(281);
     width: 100%;
     position: relative;
 }
@@ -81,7 +82,7 @@
 	transform: translate(-50%,-50%);
 	width:100%;
 	height:100%;
-	object-fit: contain;
+	object-fit: cover;
 }
 
 .about__img-right-pc{
@@ -103,7 +104,7 @@
 	transform: translate(-50%,-50%);
 	width:100%;
 	height:100%;
-	object-fit: contain;
+	object-fit: cover;
 }
 
 .about__container {
@@ -119,7 +120,7 @@
 
 .about__content{
     @include mq(md){
-        max-width: rem(400);
+        width: 45%;
         margin-left: rem(40);
 
 }
@@ -140,6 +141,7 @@
 
 .about__text {
     margin-top: rem(18);
+    margin-right: rem(10);
     font-weight: $normal;
     color: $green;
     line-height: 1.5;

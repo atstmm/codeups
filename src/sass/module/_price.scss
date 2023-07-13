@@ -41,12 +41,26 @@
 
 .price__img-sp {
     margin-top: rem(28);
+    aspect-ratio: 345 / 227;
+}
+
+.price__img-sp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .price__img-pc {
     margin-top: rem(40);
     margin-left: rem(93);
     max-width: rem(492);
     width: 100%;
+    aspect-ratio: 492 / 746;
+}
+
+.price__img-pc img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .price__items {
@@ -102,6 +116,7 @@
     font-size: rem(14);
     font-weight: $normal;
     line-height: 1.71428571;
+    margin-left: rem(20);
     @include mq(md){
         letter-spacing: 0.1em;
 }

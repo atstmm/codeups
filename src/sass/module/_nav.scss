@@ -6,13 +6,18 @@
 
 .nav__items {
     display: flex;
+    justify-content: space-around;
     @include mq(md){
         margin-top: rem(25);
+        justify-content: normal;
     }
 }
 
 .nav__items--right {
-    padding-left: rem(22);
+    padding-left: rem(14);
+    @include mq(md){
+        padding-left: rem(22);
+    }
 }
 
 .nav__item {
@@ -61,7 +66,9 @@
 
 }
 
-
+.nav__item--icon:hover{
+    opacity: 0.5;
+}
 
 .nav__sub-items {
     @include mq(md){
@@ -78,8 +85,12 @@
     padding-top: rem(24);
 }
 
+.nav__sub-item:hover{
+    opacity: 0.5;
+}
+
 .nav__items--left {
-    padding-left: rem(40);
+    padding-left: rem(21);
     @include mq(md){
         padding-left: 0;
     }

@@ -3,6 +3,7 @@
 .mv {
     margin-top: -80px;
     position: relative;
+    // height: 100vh;
     @include mq(md){
         margin-top: -90px;
     }
@@ -18,12 +19,12 @@
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 43%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
     z-index: 1;
     @include mq(md){
-        top: 49%;
+        margin-top: rem(48);
     }
 }
 
@@ -36,12 +37,10 @@
     letter-spacing: 0.54em;
     text-indent: 0.52em;
     color: $white;
-    
     @include mq(md){
         font-size: rem(80);
         line-height: 0.9;
     }
-    
 }
 
 .mv__sub-title {
@@ -58,6 +57,7 @@
 }
 
 .mySwiper{
+    height: 100vh;
     @include mq(md){
         display: none;
     }
@@ -67,4 +67,8 @@
     @include mq(md){
         display: block;
     }
+}
+
+.mv__img{
+
 }

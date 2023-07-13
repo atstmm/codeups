@@ -1,7 +1,6 @@
 @use "global" as *;
 
 
-
 .voice__inner {
     padding-top: rem(84);
     padding-bottom: rem(84);
@@ -43,28 +42,16 @@
 
 
 .voice__items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: rem(43);
+    display: grid;
+    gap: rem(40);
     @include mq(md){
+        grid-template-columns: repeat(2,1fr);
         margin-top: rem(30);
-        flex-direction: row;
-        gap: rem(40);
+        row-gap: rem(80);
     }
 }
 
-.voice__item {
-    margin-top: rem(43);
-    @include mq(md){
-        margin-top: 0;
-    }
-}
-.voice__item + .voice__item{
-    margin-top: rem(39);
-    @include mq(md){
-        margin-top: 0;
-    }
-}
 
 .voice__btn {
     margin-top: rem(38);

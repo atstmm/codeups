@@ -72,9 +72,9 @@
 .Copyright {
     padding-top: rem(33);
     width: 100%;
+    text-align: center;
     @include mq(md){
         padding-top: rem(74);
-        text-align: center;
     }
 }
 .Copyright small {

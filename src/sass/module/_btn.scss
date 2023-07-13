@@ -7,8 +7,9 @@
     font-size: rem(14);
     background-color: $green-accent;
     color: $white;
+    border: 1px solid $green-accent;
     font-weight: $normal;
-    padding: rem(16) rem(92) rem(16) rem(37);
+    padding: rem(15) rem(91) rem(15) rem(36);
     line-height: 1.571;
     cursor: pointer;
     transition: .3s;
@@ -48,8 +49,8 @@
     content: "";
     border: 1px solid $green-accent;
     position: absolute;
-    right: -4px;
-    bottom: -4px;
+    right: -5px;
+    bottom: -5px;
     width: 100%;
     height: 100%;
     z-index: -2;
@@ -60,7 +61,7 @@
     color: $green-accent;
     border: 1px solid $green-accent;
     background-color: $white;
-    padding: rem(15) rem(87) rem(15) rem(39);
+    padding: rem(15) rem(91) rem(15) rem(36);
 }
 .btn:hover::after{
     background-image: url(../images/common/btn/btn-green.png);

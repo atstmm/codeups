@@ -10,6 +10,7 @@
 
 .campaign__container{
     position: relative;
+    margin-right: calc(50% - 50vw);
 }
 
 
@@ -19,13 +20,13 @@
 }
 
 .mySwiper-campaign{
-    padding-left: rem(15);
     padding-bottom: rem(40);
     padding-top: rem(28);
+
     @include mq(md){
-        padding-left: rem(180);
         padding-bottom: rem(84);
         padding-top: rem(40);
+        
     }
 }
 
@@ -43,7 +44,7 @@
     width: rem(80);
     height: rem(80);
     top: -43px;
-    right: -15.7rem;
+    right: -12.4rem;
     color: transparent;
     }
 }
@@ -52,6 +53,7 @@
     width: rem(80);
     height: rem(80);
     top: -43px;
+    left: -2.6rem;
     color: transparent;
     }
 }
