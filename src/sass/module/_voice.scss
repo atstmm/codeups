@@ -22,7 +22,7 @@
         height: rem(138);
         position: absolute;
         top: 2.8%;
-        left: -4.9%;
+        left: calc(50% - min(620px,50vw));
     }
 }
 .voice__inner::after{

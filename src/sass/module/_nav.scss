@@ -92,7 +92,7 @@
 .nav__items--left {
     padding-left: rem(21);
     @include mq(md){
-        padding-left: 0;
+        padding-left: rem(142);
     }
 }
 

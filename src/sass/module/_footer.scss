@@ -62,9 +62,14 @@
     }
 }
 
-.footer__wrapper{
+.footer__wrapper:not(:last-child){
     @include mq(md){
     padding-right: rem(142);
+    }
+}
+.footer__wrapper:nth-child(4){
+    @include mq(md){
+    padding-right: 0;
     }
 }
 

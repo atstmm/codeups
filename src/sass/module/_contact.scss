@@ -32,7 +32,7 @@
         max-width: rem(301);
         height: auto;
         top: -2.4rem;
-        right: -8rem;
+        right: calc(50% - min(670px,50vw));
         aspect-ratio: 301 /138;
     }
 }

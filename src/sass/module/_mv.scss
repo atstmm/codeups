@@ -3,7 +3,7 @@
 .mv {
     margin-top: -80px;
     position: relative;
-    // height: 100vh;
+    min-height: 100vh;
     @include mq(md){
         margin-top: -90px;
     }
@@ -64,11 +64,18 @@
 }
 .mySwiper-pc{
     display: none;
+    height: 100vh;
     @include mq(md){
         display: block;
     }
 }
 
-.mv__img{
 
+.mv__slide {
+    height: inherit;
+}
+
+.mv__slide img {
+    height: 100%;
+    object-fit: cover;
 }

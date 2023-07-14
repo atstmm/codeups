@@ -23,7 +23,7 @@
     height: rem(181);
     position: absolute;
     bottom: 5.5%;
-    right: -6%;
+    right: calc(50% - min(633px,50vw));
     z-index: 2;
     }
 }
