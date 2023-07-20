@@ -2,9 +2,6 @@
 
 .information {
     background-color: $light-green;
-}
-
-.information__inner {
     padding-top: rem(81);
     padding-bottom: rem(83);
     @include mq(md){
@@ -64,10 +61,10 @@
     height: rem(1);
     width: 100%;
     position: absolute;
-    bottom: -4px;
+    bottom: rem(-4);
     left: 0;
     @include mq(md){
-        bottom: -3px;
+        bottom: rem(-3);
     }
 }
 

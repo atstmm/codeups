@@ -34,6 +34,13 @@
     }
 }
 
+.footer__icon--facebook:hover{
+    opacity: 0.5;
+}
+.footer__icon--instagram:hover{
+    opacity: 0.5;
+}
+
 .footer__icon--facebook {
     width: rem(23);
     height: rem(23);
@@ -64,22 +71,22 @@
 
 .footer__wrapper:not(:last-child){
     @include mq(md){
-    padding-right: rem(142);
+    margin-right: rem(142);
     }
 }
 .footer__wrapper:nth-child(4){
     @include mq(md){
-    padding-right: 0;
+    margin-right: 0;
     }
 }
 
 
 .Copyright {
-    padding-top: rem(33);
+    margin-top: rem(33);
     width: 100%;
     text-align: center;
     @include mq(md){
-        padding-top: rem(74);
+        margin-top: rem(74);
     }
 }
 .Copyright small {

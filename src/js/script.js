@@ -5,12 +5,20 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         if($(".js-hamburger").hasClass("is-active")){
         $(".js-hamburger").removeClass("is-active");
         $(".js-sp-nav").fadeOut(300);
+        $("body").removeClass("is-active");
+        $(".header__inner").removeClass("is-active");
+        
     }else{
         $(".js-hamburger").addClass("is-active");
         $(".js-sp-nav").fadeIn(300);
+        $("body").addClass("is-active");
+        $(".header__inner").addClass("is-active");
     }
 
+    
 });
+
+
    //swiper sp
    var swiper = new Swiper(".mySwiper", {
     pagination: {
@@ -33,11 +41,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         delay: 3000,
     },
   });
+
    //swiper campaign
    var swiper = new Swiper(".mySwiper-campaign", {
     slidesPerView: 1.25,
     spaceBetween: 24,
     breakpoints: {
+      400: {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+      },
       560: {
         slidesPerView: 2.3,
         spaceBetween: 30,
@@ -64,7 +77,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    freeMode: true, // 前後のスライドで止まらずにスライド
       loop: true, // ループさせる
       autoplay: { // 自動再生
       delay: 3000,
@@ -114,7 +126,7 @@ $(document).ready(function () {
     if (scrollHeight - scrollPosition <= footHeight) { //ドキュメントの高さと現在の位置の差がフッターの高さ以下のとき
       $("#js-pagetop").css({ position: "absolute", bottom: footHeight + "px" }); //positionをabsoluteに変更
     } else { //それ以外の場合は
-      $("#js-pagetop").css({ position: "fixed", bottom: "0" }); //固定で表示
+      $("#js-pagetop").css({ position: "fixed", bottom: "15px" }); //固定で表示
     }
   });
 

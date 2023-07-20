@@ -2,9 +2,6 @@
 
 .price {
     background-color: $light-green;
-}
-
-.price__inner {
     padding-top: rem(80);
     padding-bottom: rem(83);
     @include mq(md){
@@ -14,7 +11,8 @@
     }
 }
 
-.price__inner::after {
+
+.price::after {
     @include mq(md){
     content: "";
     background-image: url(../images/common/background/fish-left.png);
@@ -25,7 +23,7 @@
     height: rem(200);
     position: absolute;
     bottom: 5%;
-    left: calc(50% - min(621,50vw));
+    left: calc(50% - min(rem(620),48%));
     }
 }
 
@@ -82,7 +80,10 @@
     font-weight: $bold;
     line-height: 1.5;
     position: relative;
-    margin-bottom: rem(4);
+    padding-bottom: rem(3);
+    @include mq(md){
+        padding-bottom: rem(2);
+    }
 }
 .price__item-title::after {
     content: "";
@@ -90,14 +91,17 @@
     height: rem(1);
     background-color: $green-accent;
     position: absolute;
-    bottom: -4px;
+    bottom: rem(-3);
     left: 0;
+    @include mq(md){
+        bottom: 0;
+    }
 }
 
 .price__item-lists {
     display: flex;
     justify-content: space-between;
-    padding-top: rem(8);
+    margin-top: rem(8);
 }
 
 
@@ -108,6 +112,7 @@
     line-height: 1.71428571;
     @include mq(md){
         letter-spacing: 0.155em;
+        line-height: 1.75;
     }
 }
 

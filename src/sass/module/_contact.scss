@@ -1,23 +1,22 @@
 @use "global" as *;
 
-
-.contact__inner {
-    padding-top: rem(82);
-    padding-bottom: rem(104);
+.contact {
     position: relative;
+}
+
+.contact__container {
+    padding-top: rem(82);
     @include mq(md){
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: $white;
         box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        margin-top: rem(140);
-        margin-bottom: rem(160);
         padding-bottom: rem(80);
     }
 }
 
-.contact__inner::after {
+.contact::after {
     content: "";
     background: url(../images/common/background/fish-left.png);
     background-repeat: no-repeat;
@@ -31,8 +30,8 @@
     @include mq(md){
         max-width: rem(301);
         height: auto;
-        top: -2.4rem;
-        right: calc(50% - min(670px,50vw));
+        top: -10%;
+        right: calc(50% - min(rem(670),48%));
         aspect-ratio: 301 /138;
     }
 }
@@ -51,7 +50,7 @@
         height: 100%;
         background: $green-accent;
         position: absolute;
-        right: -32px;
+        right: rem(-32);
         top: 0;
     }
 }
@@ -88,12 +87,12 @@
     width: rem(295);
     height: rem(1);
     position: absolute;
-    bottom: -5px;
+    bottom: rem(-9);
     left: 50%;
     transform: translateX(-50%);
     @include mq(md){
         width: rem(440);
-        bottom: -8px;
+        bottom: rem(-8);
     }
 }
 
@@ -125,17 +124,28 @@
 }
 
 .contact__access-list+ .contact__access-list {
-    padding-top: rem(4);
+    margin-top: rem(4);
 }
 
 
-.contact__access-map {
+.contact__access-map{
     max-width: rem(295);
     margin: rem(16) auto rem(49) auto;
     @include mq(md){
         max-width: rem(273);
+        max-height: rem(148);
         margin: 0 0 0 rem(22);
        }
+}
+
+.contact__access-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 295 / 160;
+    @include mq(md){
+        aspect-ratio: 273 / 148;
+    }
 }
 
 .contact__container-right {
@@ -152,7 +162,7 @@
     line-height: 1.28571429;
     color: $green-accent;
     text-align: center;
-    padding-top: rem(10);
+    margin-top: rem(10);
 }
 
 .contact__btn {

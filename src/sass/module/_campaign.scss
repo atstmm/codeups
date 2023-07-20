@@ -1,33 +1,30 @@
 @use "global" as *;
 
 
-.campaign__inner {
-    margin-top: rem(41);
-    @include mq(md){
-        margin-top: rem(120);
-    }
-}
 
 .campaign__container{
     position: relative;
     margin-right: calc(50% - 50vw);
+    margin-top: rem(28);
+
+    @include mq(md){
+        margin-top: rem(40);
+        
+    }
 }
 
 
 
 .campaign__btn{
     text-align: center;
+    margin-top: rem(35);
+    @include mq(md){
+        margin-top: rem(79);
+    }
 }
 
 .mySwiper-campaign{
-    padding-bottom: rem(40);
-    padding-top: rem(28);
-
-    @include mq(md){
-        padding-bottom: rem(84);
-        padding-top: rem(40);
-        
-    }
+    padding-bottom: rem(5);
 }
 
 
@@ -43,7 +40,7 @@
     @include mq(md){
     width: rem(80);
     height: rem(80);
-    top: -43px;
+    top: rem(-82);
     right: -12.4rem;
     color: transparent;
     }
@@ -52,7 +49,7 @@
     @include mq(md){
     width: rem(80);
     height: rem(80);
-    top: -43px;
+    top: rem(-82);
     left: -2.6rem;
     color: transparent;
     }
