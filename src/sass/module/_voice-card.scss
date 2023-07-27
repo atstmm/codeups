@@ -28,7 +28,6 @@
         justify-content: space-between;
         align-items: end;
         margin-top: rem(31);
-        margin-left: auto;
     }
 }
 
@@ -49,6 +48,7 @@
     padding: rem(3) rem(11);
     @include mq(md){
         padding: rem(5) rem(16);
+        margin-left: auto;
     }
 }
 

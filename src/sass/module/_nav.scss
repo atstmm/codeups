@@ -7,13 +7,14 @@
 .nav__items {
     display: flex;
     justify-content: space-around;
+    padding-bottom: rem(20);
     @include mq(md){
         margin-top: rem(25);
         justify-content: normal;
     }
 }
 
-.nav__items--right {
+.nav__items-right {
     margin-left: rem(14);
     @include mq(md){
         margin-left: rem(22);
@@ -44,7 +45,7 @@
     }
 }
 
-.nav__item--icon {
+.nav__item-icon {
     display: block;
     font-size: rem(16);
     font-weight: $bold;
@@ -53,7 +54,7 @@
     position: relative;
 }
 
-.nav__item--icon::before {
+.nav__item-icon::before {
     content: "";
     background: url(../images/common/nav/nav-icon.png);
     background-repeat: no-repeat;
@@ -66,7 +67,7 @@
 
 }
 
-.nav__item--icon:hover{
+.nav__item-icon:hover{
     opacity: 0.5;
 }
 
@@ -93,7 +94,7 @@
     opacity: 0.5;
 }
 
-.nav__items--left {
+.nav__items-left {
     margin-left: rem(21);
     @include mq(md){
         margin-left: rem(142);

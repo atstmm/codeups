@@ -19,8 +19,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 });
 
 
-   //swiper sp
-   var swiper = new Swiper(".mySwiper", {
+   //swiper mv
+   var swiper = new Swiper(".js-mv-swiper", {
     pagination: {
       el: ".swiper-pagination", // 追加したクラス名に変える
     },
@@ -29,58 +29,30 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         autoplay: { // 自動再生
         delay: 3000,
     },
+    effect: "fade",
+    speed: 5000,
   });
-  //swiper pc
-   var swiper = new Swiper(".mySwiper-pc", {
-    pagination: {
-      el: ".swiper-pagination", // 追加したクラス名に変える
-    },
-        clickable: true, // クリック可能にする
-        loop: true, // ループさせる
-        autoplay: { // 自動再生
-        delay: 3000,
-    },
-  });
+  
 
    //swiper campaign
-   var swiper = new Swiper(".mySwiper-campaign", {
-    slidesPerView: 1.25,
-    spaceBetween: 24,
-    breakpoints: {
-      400: {
-        slidesPerView: 1.5,
-        spaceBetween: 30,
-      },
-      560: {
-        slidesPerView: 2.3,
-        spaceBetween: 30,
-      },
-      768: {
-        slidesPerView: 2.5,
-        spaceBetween: 40,
-      },
-      900: {
-        slidesPerView: 2.8,
-        spaceBetween: 40,
-      },
-      1300: {
-        slidesPerView: 3.5,
-        spaceBetween: 43,
-        
-      },
-      1600: {
-        slidesPerView: 4.5,
-        spaceBetween: 43,
-      },
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-      loop: true, // ループさせる
+   var swiper = new Swiper(".js-campaign-swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      speed: 2000,
+      navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
       autoplay: { // 自動再生
-      delay: 3000,
-  },
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+      breakpoints: {
+            768: {
+              spaceBetween: 40,
+            },
+      },
 
   });
 

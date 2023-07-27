@@ -48,13 +48,6 @@
     }
 }
 
-.blog__item{
-    // @include mq(md){
-    // // margin-left: rem(5);
-    // // margin-right: rem(5);
-    // }
-}
-
 
 .blog__btn {
     margin-top: rem(40);
@@ -64,3 +57,7 @@
     }
 }
 
+.blog__item:hover{
+    transform: translateY(rem(-10));
+    transition: all 0.5s;
+}

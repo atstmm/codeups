@@ -34,14 +34,14 @@
     }
 }
 
-.footer__icon--facebook:hover{
+.footer__icon-facebook:hover{
     opacity: 0.5;
 }
-.footer__icon--instagram:hover{
+.footer__icon-instagram:hover{
     opacity: 0.5;
 }
 
-.footer__icon--facebook {
+.footer__icon-facebook {
     width: rem(23);
     height: rem(23);
     @include mq(md){
@@ -51,7 +51,7 @@
     }
 }
 
-.footer__icon--instagram {
+.footer__icon-instagram {
     width: rem(24);
     height: rem(24);
     margin-left: rem(16);
@@ -63,23 +63,17 @@
 
 
 
-.footer__nav--pc {
+.footer__nav-pc {
     @include mq(md){
         display: flex;
     }
 }
 
-.footer__wrapper:not(:last-child){
+.footer__wrapper:not(:first-child){
     @include mq(md){
-    margin-right: rem(142);
+    margin-left: rem(142);
     }
 }
-.footer__wrapper:nth-child(4){
-    @include mq(md){
-    margin-right: 0;
-    }
-}
-
 
 .Copyright {
     margin-top: rem(33);
