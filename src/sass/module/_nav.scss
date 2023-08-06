@@ -45,7 +45,7 @@
     }
 }
 
-.nav__item-icon {
+.nav__item a {
     display: block;
     font-size: rem(16);
     font-weight: $bold;
@@ -54,7 +54,7 @@
     position: relative;
 }
 
-.nav__item-icon::before {
+.nav__item a::before {
     content: "";
     background: url(../images/common/nav/nav-icon.png);
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@
 
 }
 
-.nav__item-icon:hover{
+.nav__item a:hover{
     opacity: 0.5;
 }
 
@@ -102,3 +102,16 @@
 }
 
 
+//pc-footer
+
+.nav__footer-pc {
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.nav__footer-content:not(:first-child){
+    @include mq(md){
+    margin-left: rem(142);
+    }
+}

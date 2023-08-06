@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.page{
+    position: relative;
+}
+
+.page::before{
+    content: "";
+    background: url(../images/common/background/fish-sub.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: rem(120);
+    width: 100%;
+    height: rem(55);
+    position: absolute;
+    top: -1.4%;
+    left: calc(50% - min(rem(172),48%));
+    z-index: -1;
+    @include mq(md){
+        max-width: rem(300);
+        height: rem(138);
+        position: absolute;
+        top: -7%;
+        left: calc(50% - min(rem(620),48%));
+    }
+}
+
+.page__inner.inner{
+    @include mq(md){
+    padding-left: rem(165);
+    padding-right: rem(165);
+    }
+}
+
+.page__title{
+    font-size: rem(24);
+    font-weight: $normal;
+    @include mq(md){
+        font-size: rem(32);
+    }
+}
+
+.page__content{
+    line-height: 2;
+    font-weight: $normal;
+    margin-top: rem(37);
+}
+
+.page__items{
+    list-style-type: decimal;
+    padding-left: rem(24);
+}
+
+.page__item-list{
+    margin-top: rem(31);
+}
+
+.page__text:not(:first-child){
+    margin-top: rem(33);
+}

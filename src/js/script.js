@@ -106,10 +106,10 @@ $(document).ready(function () {
 
 //ローディングアニメーション colorbox
 //要素の取得とスピードの設定
-var box = $('.colorbox'),
+var box = $('.js-colorbox'),
     speed = 700;  
  
-//.colorboxの付いた全ての要素に対して下記の処理を行う
+//.js-colorboxの付いた全ての要素に対して下記の処理を行う
 box.each(function(){
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),
@@ -130,6 +130,31 @@ box.each(function(){
           }
      });
 });
+
+//モーダル
+
+$(document).ready(function() {
+  // 画像をクリックした時の処理
+  $('.js-modal-img img').on('click', function() {
+    // クリックされた画像のソースを取得
+    var imageSrc = $(this).attr('src');
+    
+    // モーダルに画像を表示
+    $('.js-modal').html($(this).prop('outerHTML'));
+    
+    // モーダルを表示
+    $('body').addClass('js-modal-open');
+    $('.js-modal').fadeIn(200);
+  });
+  
+  // モーダルをクリックした時の処理
+  $('.js-modal').on('click', function() {
+    // モーダルを非表示にする
+    $('body').removeClass('js-modal-open');
+    $(this).fadeOut(200);
+  });
+});
+
 
 });
 

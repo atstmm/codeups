@@ -1,0 +1,134 @@
+
+@use "global" as *;
+
+.page-price{
+    position: relative;
+}
+
+.page-price::before{
+    content: "";
+    background: url(../images/common/background/fish-sub.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: rem(120);
+    width: 100%;
+    height: rem(55);
+    position: absolute;
+    top: -2.2%;
+    left: calc(50% - min(rem(172),48%));
+    z-index: -1;
+    @include mq(md){
+        max-width: rem(300);
+        height: rem(138);
+        position: absolute;
+        top: -40%;
+        left: calc(50% - min(rem(620),48%));
+    }
+}
+
+.page-price__body{
+}
+
+.page-price__table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    @include mq(md){
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.page-price__table+.page-price__table{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(80);
+    }
+}
+
+.page-price__table thead{
+    background: $green-accent;
+    border-left: 1px solid $green-accent;
+    border-right: 1px solid $green-accent;
+    @include mq(md){
+        width: rem(199);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: rem(74);
+    }
+
+}
+
+.page-price__thead th{
+    color: $white;
+    line-height: 1.5;
+    font-weight: $bold;
+    padding: rem(7);
+    @include mq(md){
+        padding: 0;
+    }
+    
+}
+
+.page-price__thead th span{
+    position: relative;
+    margin-left: rem(30);
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+.page-price__thead th span::before{
+    content: "";
+    background: url(../images/common/page-price/page-price-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(24);
+    height: rem(24);
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    transform: translateY(-50%);
+    @include mq(md){
+        width: rem(61);
+        height: rem(54);
+        top: 250%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.page-price__table tbody{
+    
+}
+
+.page-price__table tbody th{
+    line-height: 1.5;
+    font-weight: $normal;
+    border: 1px solid $green-accent;
+    height: rem(60);
+    text-align: center;
+    width: 70%;
+    @include mq(md){
+        width: rem(339);
+        text-align: left;
+        padding-left: rem(15);
+        height: rem(59);
+    }
+}
+
+.page-price__table tbody td{
+    line-height: 1.5;
+    font-weight: $normal;
+    border: 1px solid $green-accent;
+    text-align: right;
+    padding-right: rem(15);
+    width: 30%;
+    @include mq(md){
+        width: rem(161);
+        padding-right: rem(15);
+    }
+}

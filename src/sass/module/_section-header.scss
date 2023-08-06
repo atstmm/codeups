@@ -65,11 +65,12 @@
     line-height: 0.8;
     color: $green;
     font-weight: $normal;
+    
     @include mq(md){
         line-height: 0.87;
     }
 }
-.section-header__title-contact span {
+.section-header__title-contact::first-letter {
     color: $green-accent
 
 }

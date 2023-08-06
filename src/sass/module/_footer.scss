@@ -75,15 +75,15 @@
     }
 }
 
-.Copyright {
-    margin-top: rem(33);
+.footer__copyright {
+    margin-top: rem(13);
     width: 100%;
     text-align: center;
     @include mq(md){
-        margin-top: rem(74);
+        margin-top: rem(51);
     }
 }
-.Copyright small {
+.footer__copyright small {
     font-size: rem(12);
     font-family: $english-font-family;
     color: $white;

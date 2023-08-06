@@ -1,5 +1,5 @@
 @use "global" as *;
-.about {
+.about-us {
     @include mq(md){
         position: relative;
     }
@@ -11,7 +11,7 @@
     }
 }
 
-.about::after {
+.about-us::after {
     @include mq(md){
     content: "";
     background: url(../images/common/background/sango.png);
@@ -69,11 +69,23 @@
     // max-width: rem(281);
     width: 100%;
     position: relative;
+    @include mq(md){
+        margin-left: rem(-200);
+        max-width: rem(880);
+        margin-top: rem(80);
+        width: 100%;
+        position: relative;
+    }
 }
 .about__img-right::before{
     content: "";
     display: block;
     padding-top: 66.1921708%;
+    @include mq(md){
+        content: "";
+        display: block;
+        padding-top: 66.0227273%;
+    }
 }
 .about__img-right img{
     position: absolute;
@@ -85,27 +97,6 @@
 	object-fit: cover;
 }
 
-.about__img-right-pc{
-    margin-left: rem(-200);
-    max-width: rem(880);
-    margin-top: rem(80);
-    width: 100%;
-    position: relative;
-}
-.about__img-right-pc::before{
-    content: "";
-    display: block;
-    padding-top: 66.0227273%;
-}
-.about__img-right-pc img{
-    position: absolute;
-    top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width:100%;
-	height:100%;
-	object-fit: cover;
-}
 
 .about__container {
     margin-top: rem(40);
@@ -149,7 +140,7 @@
     @include mq(md){
         line-height: 1.55;
         color: $white;
-        margin-top: rem(21);
+        margin-top: rem(16);
     }
 
 }

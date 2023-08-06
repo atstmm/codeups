@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.page-about-gallery {
+    position: relative;
+}
+
+.page-about-gallery::after {
+    @include mq(md){
+    content: "";
+    background: url(../images/common/background/fish-left.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(301);
+    height: rem(138);
+    position: absolute;
+    top: -1.3%;
+    right: calc(50% - min(rem(640),48%));
+
+    }
+}
+
+.page-about-gallery__content{
+    margin-top: rem(38);
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: rem(8);
+    @include mq(md){
+        margin-top: rem(80);
+        grid: masonry / repeat(aut-fit,minmax(20em,1fr));
+        // grid-auto-flow: dense;
+        // grid: 746px 369px/492px 580px;
+        // grid-auto-rows: 1fr,1fr;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: repeat(4,1fr);
+        
+        // grid-template-columns: repeat(auto-fit, minmax(492px, 1fr));
+        // grid-template-rows: repeat();
+        // grid-auto-flow: row;
+    }
+
+}
+
+.page-about-gallery__img-long{
+    aspect-ratio: 345 / 523;
+    @include mq(md){
+        aspect-ratio: 492 / 746;
+    }
+}
+
+.page-about-gallery__img-long img{
+    width: 100%;
+    height: 100%;
+    max-height: rem(746);
+    max-width: rem(492);
+    object-fit: cover;
+}
+
+.page-about-gallery__img{
+    aspect-ratio: 345 / 219;
+    @include mq(md){
+        aspect-ratio: 580 / 369;
+    }
+}
+
+.page-about-gallery__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+//モーダル
+.page-about-gallery__modal{
+    @include mq(md){
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0,0,0,0.7);
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+.page-about-gallery__modal img{
+    @include mq(md){
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 63%;
+        max-height: 76%;
+        object-fit: cover;
+    }
+}
