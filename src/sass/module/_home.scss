@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.home__cards{
+    display: grid;
+    gap: rem(40);
+}

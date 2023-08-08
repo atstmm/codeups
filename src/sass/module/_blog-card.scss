@@ -7,11 +7,13 @@
 
 .blog-card__wrapper {
     padding: rem(16) rem(16) 0 rem(16);
+    overflow: hidden;
 }
 
 
 .blog-card__img {
     position: relative;
+    
 }
 
 .blog-card__img::before {

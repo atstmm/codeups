@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.page-faq{
+    position: relative;
+}
+
+.page-faq::before{
+    content: "";
+    background: url(../images/common/background/fish-sub.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: rem(120);
+    width: 100%;
+    height: rem(55);
+    position: absolute;
+    top: -1.2%;
+    left: calc(50% - min(rem(172),48%));
+    z-index: -1;
+    @include mq(md){
+        max-width: rem(300);
+        height: rem(138);
+        position: absolute;
+        top: -3.3%;
+        left: calc(50% - min(rem(620),48%));
+    }
+}
+
+.page-faq__accordion {
+    @include mq(md){
+        width: 64.9%;
+        margin: auto;
+    }
+}
+
+.page-faq__accordion+.page-faq__accordion{
+    margin-top: rem(40);
+}
+
+.page-faq__accordion summary{
+    width: 100%;
+    background: $green-accent;
+    color: $white;
+    padding: rem(16);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    @include mq(md){
+        font-size: rem(20);
+        padding: rem(25) rem(40);
+    }
+}
+
+.page-faq__accordion summary::after{
+    content: "";
+    background-color: $white;
+    position: absolute;
+    width: rem(28);
+    height: rem(1);
+    top: 50%;
+    right: 10%;
+    transform: translate(50%,-50%);
+    @include mq(md){
+        right: 8%;
+    }
+}
+.page-faq__accordion summary::before{
+    content: "";
+    background-color: $white;
+    position: absolute;
+    width: rem(1);
+    height: rem(28);
+    top: 50%;
+    right: 10%;
+    transform: translate(50%,-50%);
+    @include mq(md){
+        right: 8%;
+    }
+}
+
+.page-faq__accordion-content {
+    border: 1px solid $green-accent;
+    padding: rem(23) rem(16);
+    color: $green;
+    line-height: 1.4375;
+    @include mq(md){
+        padding: rem(39);
+        margin-top: rem(16);
+    }
+}
+
+.page-faq__accordion[open] summary::before{
+    opacity: 0;
+    transform: 0.3s;
+}

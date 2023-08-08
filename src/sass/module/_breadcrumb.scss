@@ -1,9 +1,13 @@
 @use "global" as *;
 
-.breadcrumb{
-    margin-top: rem(8);
-}
-
 .breadcrumb__nav{
     font-size: rem(14);
+}
+
+.breadcrumb__nav-white{
+    color: $white;
+}
+
+.breadcrumb__404{
+    background-color: $green-accent;
 }

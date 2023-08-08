@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.top-not-found{
+    padding-top: rem(52);
+    padding-bottom: rem(43);
+    @include mq(md){
+        padding-top: rem(126);
+        padding-bottom: rem(152);
+    }
+}

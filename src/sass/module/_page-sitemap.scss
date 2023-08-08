@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.page-sitemap{
+    position: relative;
+}
+
+.page-sitemap::before{
+    content: "";
+    background: url(../images/common/background/fish-sub.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: rem(120);
+    width: 100%;
+    height: rem(55);
+    position: absolute;
+    top: 3%;
+    left: calc(50% - min(rem(172),48%));
+    z-index: -1;
+    @include mq(md){
+        display: none;
+    }
+}
+
+
+.page-sitemap__nav.nav{
+    background-color: transparent;
+}
+
+.page-sitemap__nav-item.nav__item a{
+    color: $green;
+}
+
+
+.page-sitemap__nav-item.nav__item a::before {
+    background: url(../images/common/page-sitemap/page-sitemap-icon.png);
+}
+
+.page-sitemap__nav-sub-items.nav__sub-items a{
+    color: $green;
+}
+
+.page-sitemap__content.nav__footer-content:not(:first-child){
+    @include mq(md){
+    margin-left: rem(166);
+    }
+}
+
+.page-sitemap__items-left.nav__items-left{
+    margin-left: rem(50);
+    @include mq(md){
+        margin-left: rem(166);
+        }
+}
+
+.page-sitemap__items-right.nav__items-right{
+    margin-left: rem(20);
+    @include mq(md){
+        margin-left: rem(22);
+        }
+}

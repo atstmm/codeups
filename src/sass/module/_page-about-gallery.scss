@@ -26,19 +26,12 @@
     gap: rem(8);
     @include mq(md){
         margin-top: rem(80);
-        grid: masonry / repeat(aut-fit,minmax(20em,1fr));
-        // grid-auto-flow: dense;
-        // grid: 746px 369px/492px 580px;
-        // grid-auto-rows: 1fr,1fr;
-        // grid-template-columns: 1fr 1fr;
-        // grid-template-rows: repeat(4,1fr);
-        
-        // grid-template-columns: repeat(auto-fit, minmax(492px, 1fr));
-        // grid-template-rows: repeat();
-        // grid-auto-flow: row;
+        grid-template-columns: repeat(11,1fr);
     }
 
 }
+
+
 
 .page-about-gallery__img-long{
     aspect-ratio: 345 / 523;
