@@ -7,13 +7,13 @@
 
 .blog-card__wrapper {
     padding: rem(16) rem(16) 0 rem(16);
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 
 .blog-card__img {
     position: relative;
-    
+    overflow: hidden;
 }
 
 .blog-card__img::before {
@@ -30,6 +30,11 @@
 	width:100%;
 	height:100%;
 	object-fit: cover;
+    transition: transform .6s ease; 
+}
+
+.blog-card__img:hover img{
+    transform:scale(1.1) translate(-50%,-50%);
 }
 
 .blog-card__content {

@@ -98,16 +98,23 @@
 .page-information__tab:checked+.page-information__tab-label {
     background: $green-accent;
     color: $white;
-    @include mq(md){
-    .page-information__tab-icon1::after{
-        fill: $white;
+}
+.page-information__tab:checked+.page-information__tab-icon1::after{
+        @include mq(md){
+        background: url(../images/common/page-information/page-information-icon1-w.svg);
     }
 }
+.page-information__tab:checked+.page-information__tab-icon2::after{
+        @include mq(md){
+        background: url(../images/common/page-information/page-information-icon2-w.svg);
+    }
+}
+.page-information__tab:checked+.page-information__tab-icon3::after{
+        @include mq(md){
+        background: url(../images/common/page-information/page-information-icon3-w.svg);
+    }
 }
 
-.page-information__tab:checked+.page-information__tab-label.page-information__tab-icon1::after{
-    
-}
 
 .page-information__tab:checked+.page-information__tab-label+.page-information__tab-content {
      display: block;

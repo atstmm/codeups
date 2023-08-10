@@ -1,17 +1,10 @@
 @use "global" as *;
 
-.home{
+.page-contact{
     position: relative;
-    @include mq(md){
-    display: flex;
-    padding-left: min(11vw,rem(155));
-    padding-right: min(10vw,rem(140));
-
-    }
 }
 
-
-.home::before{
+.page-contact::before{
     content: "";
     background: url(../images/common/background/fish-sub.png);
     background-repeat: no-repeat;
@@ -20,32 +13,14 @@
     width: 100%;
     height: rem(55);
     position: absolute;
-    top: -0.3%;
+    top: 0;
     left: calc(50% - min(rem(172),48%));
     z-index: -1;
     @include mq(md){
         max-width: rem(300);
         height: rem(138);
         position: absolute;
-        top: -2.6%;
+        top: -2.8%;
         left: calc(50% - min(rem(620),48%));
-    }
-}
-
-.home__cards{
-    display: grid;
-    gap: rem(40);
-    grid-template-columns: 1fr;
-    @include mq(md){
-        grid-template-columns: repeat(auto-fill,rem(333));
-        row-gap: rem(80);
-    }
-
-}
-
-.home__right{
-    @include mq(md){
-    margin-left: rem(15);
-    width: 50%;
     }
 }

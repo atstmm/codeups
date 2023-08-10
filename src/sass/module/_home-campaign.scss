@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.home-campaign__cards{
+    margin-top: rem(24);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(40);
+}
+.home-campaign__cards-card.campaign__card{
+    max-width: rem(294);
+    width: 100%;
+}
+
+.home-campaign__card.campaign-card{
+    max-width: rem(294);
+    width: 100%;
+}
+
+.home-campaign__title.campaign-card__title{
+    text-align: center;
+}
+
+.home-campaign__contain.campaign-card__contain{
+    padding-top: rem(8);
+    padding-bottom: rem(13);
+}
+
+.home-campaign__btn{
+    margin-top: rem(44);
+    text-align: center;
+}
