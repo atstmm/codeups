@@ -35,9 +35,9 @@
 .page-about-gallery__img:nth-child(6n+1),
 .page-about-gallery__img:nth-child(6n+6){
     aspect-ratio: 345 / 523;
-    grid-row: span 2;
     @include mq(md){
         aspect-ratio: 492 / 746;
+        grid-row: span 2;
         grid-column: span 5;
     }
 }
@@ -53,10 +53,10 @@
 .page-about-gallery__img:nth-child(6n+4),
 .page-about-gallery__img:nth-child(6n+5){
     aspect-ratio: 345 / 219;
-    grid-row: span 1;
     @include mq(md){
         aspect-ratio: 580 / 369;
         grid-column: span 6;
+        grid-row: span 1;
     }
 }
 .page-about-gallery__img:nth-child(6n+2) img,
