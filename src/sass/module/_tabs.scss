@@ -1,31 +1,7 @@
 @use "global" as *;
 
-.archive-tab{
-    position: relative;
-}
 
-.archive-tab::before{
-    content: "";
-    background: url(../images/common/background/fish-sub.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: rem(120);
-    width: 100%;
-    height: rem(55);
-    position: absolute;
-    top: -1.4%;
-    left: calc(50% - min(rem(172),48%));
-    z-index: -1;
-    @include mq(md){
-        max-width: rem(300);
-        height: rem(138);
-        position: absolute;
-        top: -3.6%;
-        left: calc(50% - min(rem(620),48%));
-    }
-}
-
-.archive-tab__tabs{
+.tabs__lists{
     display: grid;
     grid-template-columns: repeat(auto-fit,rem(162));
     column-gap: rem(21);
@@ -38,14 +14,10 @@
     }
 }
 
-.archive-tab__tab{
 
-
-}
-
-.archive-tab__tab.archive-tab__tab--green a,
-.archive-tab__tab a:hover,
-.archive-tab__tab a:active{
+.tabs__list.tabs__list--green a,
+.tabs__list a:hover,
+.tabs__list a:active{
     display: inline-block;
     background: $green-accent;
     color: $white;
@@ -57,7 +29,7 @@
     line-height: 1.57142857;
 }
 
-.archive-tab__tab a{
+.tabs__list a{
     display: inline-block;
     background: $white;
     color: $green-accent;

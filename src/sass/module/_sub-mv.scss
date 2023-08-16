@@ -8,6 +8,11 @@
     }
 }
 
+.sub-mv__img{
+    @include mq(md){
+        height: rem(548);
+    }
+}
 
 .sub-mv__img img{
     object-fit: cover;

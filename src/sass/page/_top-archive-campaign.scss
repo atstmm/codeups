@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.top-archive-tab{
+.top-archive-campaign{
     margin-top: rem(50);
     @include mq(md){
         margin-top: rem(150);

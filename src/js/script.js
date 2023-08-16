@@ -155,6 +155,30 @@ $(document).ready(function() {
   });
 });
 
+// タブメニュー
+$(function () {
+  // 最初のコンテンツは表示
+  $(".js-content:first-of-type").css("display", "block");
+  // タブをクリックすると
+  $(".js-tab").on("click", function () {
+    // 現在選択されているタブからcurrentを外す
+    $(".current").removeClass("current");
+    // クリックされたタブにcurrentクラスを付与
+    $(this).addClass("current");
+    // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+    const index = $(this).index();
+    // コンテンツを非表示にして、クリックしたタブのインデックス番号と同じコンテンツを表示
+    $(".js-content").hide().eq(index).fadeIn(300);
+  });
+});
+
+//アコーディオン
+$(function () {
+  $(".js-accordion-title").on("click", function() {
+    $(this).next().slideToggle(200);
+    $(this).toggleClass("open",200);
+  });
+});
 
 });
 

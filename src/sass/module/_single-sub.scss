@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.single-sub__inner.inner{
+    padding-left: rem(25);
+    padding-right: rem(25);
+    @include mq(md){
+        padding-left: rem(2);
+        padding-right: rem(2);
+    }
+}

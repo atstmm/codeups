@@ -37,14 +37,9 @@
 }
 
 .blog__items {
-    display: grid;
-    gap: rem(40);
     margin-top: rem(24);
     @include mq(md){
-        grid-template-columns: repeat(3,1fr);
         margin-top: rem(80);
-        row-gap: rem(80);
-        column-gap: rem(40);
     }
 }
 
@@ -57,13 +52,3 @@
     }
 }
 
-.blog__item:hover{
-    transform: translateY(rem(-10));
-    transition: all 0.5s;
-    transition:transform 0.3s;
-}
-
-.blog__item:hover .blog-card__img img{
-    transform:scale(1.1) transform(-50%,-50%);
-
-}

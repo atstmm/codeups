@@ -5,6 +5,9 @@
 	text-align: center;
 	justify-content: center;
 	gap: rem(12);
+	@include mq(md){
+		gap: rem(33);
+	}
 }
 
 .wp-pagenavi a, .wp-pagenavi span{

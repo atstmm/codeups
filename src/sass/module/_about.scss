@@ -5,7 +5,7 @@
     }
 }
 
-.about__inner {
+.about__wrap {
     @include mq(md){
         position: relative;
     }
@@ -98,13 +98,18 @@
 }
 
 
+.about__img-right--ml{
+    margin-left: 0;
+    margin-top: 0;
+}
+
 .about__container {
     margin-top: rem(40);
     @include mq(md){
         display: flex;
         position: absolute;
-        top: 32%;
-        left: 20%;
+        top: 21%;
+        left: 18%;
         z-index: 2;
     }
 }
@@ -130,6 +135,20 @@
     }
 }
 
+.about__head--white{
+    color: white;
+}
+
+.about__head--position{
+    position: absolute;
+    top: 6%;
+    left: 10%;
+    @include mq(md){
+        position: initial;
+
+    }
+}
+
 .about__text {
     margin-top: rem(18);
     margin-right: rem(10);
@@ -142,8 +161,13 @@
         color: $white;
         margin-top: rem(16);
     }
-
 }
+.about__text--mt{
+    @include mq(md){
+    margin-top: rem(40);
+    }
+}
+
 
 .about__btn {
     margin-top: rem(15);

@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.archive-tab{
+.archive-campaign{
     position: relative;
 }
 
-.archive-tab::before{
+.archive-campaign::before{
     content: "";
     background: url(../images/common/background/fish-sub.png);
     background-repeat: no-repeat;
@@ -24,4 +24,89 @@
         left: calc(50% - min(rem(620),48%));
     }
 }
+
+.archive-campaign__card.campaign-card{
+    max-width: rem(600);
+    @include mq(md){
+        max-width: rem(600);
+    }
+}
+
+.archive-campaign__body{
+    margin-top: rem(40);
+}
+
+.archive-campaign__content{
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: rem(40);
+    padding-left: rem(33);
+    padding-right: rem(33);
+    @include mq(md){
+        grid-template-columns: repeat(2,1fr);
+        row-gap: rem(80);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+
+.archive-campaign__contain.campaign-card__contain{
+    @include mq(md){
+        padding: rem(21) rem(24) 0 rem(24);
+        }
+}
+
+.archive-campaign__contain-bottom.campaign-card__contain-bottom::before{
+    @include mq(md){
+    top: -24%;
+    }
+}
+
+
+
+.archive-campaign__wrap {
+    display: none;
+    @include mq(md){
+        display: block;
+        padding-left: rem(24);
+        padding-right: rem(24);
+        padding-bottom: rem(42);
+    }
+}
+
+.archive-campaign__text {
+    font-size: rem(16);
+    line-height: 1.5;
+    @include mq(md){
+        margin-top: rem(23);
+    }
+
+}
+
+.archive-campaign__list {
+    margin-top: rem(32);
+    text-align: center;
+}
+
+.archive-campaign__date {
+    line-height: 1.125;
+    color: $green-accent;
+    font-weight: $bold;
+    font-family: 'Lato', sans-serif;;
+}
+
+.archive-campaign__post {
+    margin-top: rem(7);
+    font-size: rem(14);
+    color: $green-accent;
+}
+
+.archive-campaign__btn {
+    text-align: center;
+    margin-top: rem(13);
+}
+
+
 

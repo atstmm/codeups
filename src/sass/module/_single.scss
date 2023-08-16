@@ -1,5 +1,55 @@
 @use "global" as *;
 
+.single{
+    position: relative;
+    @include mq(md){
+    
+        }
+}
+
+
+.single::before{
+    content: "";
+    background: url(../images/common/background/fish-sub.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: rem(120);
+    width: 100%;
+    height: rem(55);
+    position: absolute;
+    top: -0.3%;
+    left: calc(50% - min(rem(172),48%));
+    z-index: -1;
+    @include mq(md){
+        max-width: rem(300);
+        height: rem(138);
+        position: absolute;
+        top: -2.2%;
+        left: calc(50% - min(rem(620),48%));
+    }
+}
+
+.single__inner.inner{
+    @include mq(md){
+        max-width: rem(1110);
+        padding-left: rem(15);
+        padding-right: rem(15);
+    }
+}
+
+.single__layout{
+    @include mq(md){
+        display: flex;
+        column-gap: rem(83);
+    }
+}
+
+.single__main{
+    @include mq(md){
+    width: 71%;
+    }
+}
+
 .single__date {
     font-size: rem(14);
     line-height: 1.5;
@@ -16,6 +66,9 @@
     color: $green;
     margin-top: rem(5);
     position: relative;
+    @include mq(md){
+        font-size: rem(32);
+    }
 }
 
 .single__title::after{
@@ -26,20 +79,33 @@
     background-color: $green-accent;
     bottom: rem(-4);
     left: 0;
+    @include mq(md){
+        bottom: rem(6);
+    }
 }
 
 .single__contain{
     margin-top: rem(27);
+    @include mq(md){
+        margin-top: rem(37);
+    }
 }
 
 .single__text{
     margin-top: rem(25);
+    @include mq(md){
+        margin-top: rem(41);
+    }
 }
 
 
 .single__lists{
     margin-top: rem(20);
+    @include mq(md){
+        margin-top: rem(40);
+    }
 }
+
 
 .single__list{
     position: relative;
@@ -62,4 +128,7 @@
 
 .single__lists-text{
     margin-top: rem(24);
+    @include mq(md){
+        margin-top: rem(36);
+    }
 }

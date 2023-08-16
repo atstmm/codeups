@@ -39,12 +39,12 @@
 
 .voice__items {
     margin-top: rem(43);
-    display: grid;
-    gap: rem(40);
+    // display: grid;
+    // gap: rem(40);
     @include mq(md){
-        grid-template-columns: repeat(2,1fr);
+        // grid-template-columns: repeat(2,1fr);
         margin-top: rem(30);
-        row-gap: rem(80);
+        // row-gap: rem(80);
     }
 }
 

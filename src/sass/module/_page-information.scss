@@ -25,6 +25,13 @@
     }
 }
 
+.page-information__items{
+    // @include mq(md){
+    // display: flex;
+    // align-items: center;
+    // }
+}
+
 .page-information__tabs {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -37,27 +44,23 @@
 }
 
 
-.page-information__tab-label {
+.page-information__tab {
+    display: block;
     color: $green-accent;
     background: $light-green;
     font-weight: $normal;
     font-size: rem(14);
     text-align: center;
     padding: rem(10) rem(16);
-    order: -1;
+    cursor: pointer;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
     @include mq(md){
         font-size: rem(24);
         padding: rem(29) rem(30) rem(26) rem(90);
         white-space: nowrap;
-        // width: rem(300);
     }
 }
-.page-information__tab-content {
-    width: 100%;
-    display: none;
-    
-}
+
 //アイコン
 .page-information__tab-icon1,
 .page-information__tab-icon2,
@@ -95,37 +98,40 @@
 }
 
 /* アクティブなタブ */
-.page-information__tab:checked+.page-information__tab-label {
+.page-information__tab.current{
     background: $green-accent;
     color: $white;
 }
-.page-information__tab:checked+.page-information__tab-icon1::after{
+.page-information__tab.current.page-information__tab-icon1::after{
         @include mq(md){
         background: url(../images/common/page-information/page-information-icon1-w.svg);
     }
 }
-.page-information__tab:checked+.page-information__tab-icon2::after{
+.page-information__tab.current.page-information__tab-icon2::after{
         @include mq(md){
         background: url(../images/common/page-information/page-information-icon2-w.svg);
     }
 }
-.page-information__tab:checked+.page-information__tab-icon3::after{
+.page-information__tab.current.page-information__tab-icon3::after{
         @include mq(md){
         background: url(../images/common/page-information/page-information-icon3-w.svg);
     }
 }
 
 
-.page-information__tab:checked+.page-information__tab-label+.page-information__tab-content {
-     display: block;
-}
-/* ラジオボタン非表示 */
-.page-information__tab {
-    display: none;
-}
+
+
 
 //タブコンテンツ
-.page-information__tab-content {
+.page-information__wrapper{
+    margin-top: rem(16);
+    @include mq(md){
+        margin-top: rem(24);
+    }
+}
+
+.page-information__content {
+    display: none;
     padding: rem(24);
     border: 1px solid $green-accent;
     @include mq(md){
@@ -134,7 +140,7 @@
 }
 
 
-.page-information__tab-title {
+.page-information__title {
     font-size: rem(24);
     font-weight: bold;
     color: $green;
@@ -142,7 +148,7 @@
     position: relative;
 }
 
-.page-information__tab-title::after{
+.page-information__title::after{
     content: "";
     position: absolute;
     background: $green-accent;
@@ -152,13 +158,13 @@
     left: 0;
 }
 
-.page-information__tab-text {
+.page-information__text {
     margin-top: rem(16);
     line-height: 1.5;
    
 }
 
-.page-information__tab-img {
+.page-information__img {
     margin-top: rem(6);
     aspect-ratio: 297 / 189;
     @include mq(md){
@@ -167,25 +173,25 @@
     }
 }
 
-.page-information__tab-img img{
+.page-information__img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.page-information__tab-contain{
+.page-information__contain{
     @include mq(md){
     display: flex;
     align-items: center;
     }
 }
 
-.page-information__tab-wrap{
+.page-information__wrap{
     @include mq(md){
     width: 56%;
     }
 }
 
-.gap4{
-    grid-column: 1/4;
-}
+// .gap4{
+//     grid-column: 1/4;
+// }

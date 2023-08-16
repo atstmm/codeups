@@ -13,30 +13,30 @@
     width: 100%;
     height: rem(55);
     position: absolute;
-    top: -1.2%;
+    top: rem(-24);
     left: calc(50% - min(rem(172),48%));
     z-index: -1;
     @include mq(md){
         max-width: rem(300);
         height: rem(138);
         position: absolute;
-        top: -3.3%;
+        top: rem(-70);
         left: calc(50% - min(rem(620),48%));
     }
 }
 
-.page-faq__accordion {
+.page-faq__item {
     @include mq(md){
         width: 64.9%;
         margin: auto;
     }
 }
 
-.page-faq__accordion+.page-faq__accordion{
+.page-faq__item+.page-faq__item{
     margin-top: rem(40);
 }
 
-.page-faq__accordion summary{
+.page-faq__accordion{
     width: 100%;
     background: $green-accent;
     color: $white;
@@ -50,45 +50,53 @@
     }
 }
 
-.page-faq__accordion summary::after{
+.page-faq__accordion::after{
+    content: "";
+    background-color: $white;
+    position: absolute;
+    width: rem(28);
+    height: rem(1);
+    transform: rotate(90deg);
+    top: 50%;
+    right: 5%;
+    transition: all .3s ease-in-out;
+    @include mq(md){
+        right: 6%;
+    }
+}
+.page-faq__accordion::before{
     content: "";
     background-color: $white;
     position: absolute;
     width: rem(28);
     height: rem(1);
     top: 50%;
-    right: 10%;
-    transform: translate(50%,-50%);
+    right: 5%;
+    transition: all .3s ease-in-out;
     @include mq(md){
-        right: 8%;
+        right: 6%;
     }
 }
-.page-faq__accordion summary::before{
-    content: "";
-    background-color: $white;
-    position: absolute;
-    width: rem(1);
-    height: rem(28);
-    top: 50%;
-    right: 10%;
-    transform: translate(50%,-50%);
-    @include mq(md){
-        right: 8%;
-    }
-}
+
+/* 縦線(クリック後) */
+.page-faq__accordion.open::after {
+    transform: rotate(180deg);
+    
+  }
+  /* 横線(クリック後) */
+  .page-faq__accordion.open::before {
+    opacity: 0;
+  }
 
 .page-faq__accordion-content {
     border: 1px solid $green-accent;
     padding: rem(23) rem(16);
     color: $green;
     line-height: 1.4375;
+    display: none;
     @include mq(md){
         padding: rem(39);
         margin-top: rem(16);
     }
 }
 
-.page-faq__accordion[open] summary::before{
-    opacity: 0;
-    transform: 0.3s;
-}

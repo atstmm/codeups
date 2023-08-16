@@ -1,0 +1,121 @@
+@use "global" as *;
+
+.sidebar__article-cards{
+    margin-top: rem(23);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(24);
+    @include mq(md){
+        gap: rem(26);
+    }
+}
+
+.sidebar__article-card{
+    display: flex;
+    padding: rem(16);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar__article-img {
+    aspect-ratio: 121 / 90;
+    width: 46%;
+    overflow: hidden;
+}
+
+.sidebar__article-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.sidebar__article-card:hover .sidebar__article-img img{
+    transform: scale(1.1);
+}
+
+.sidebar__article-content {
+    margin-left: rem(16);
+}
+
+.sidebar__article-date {
+    font-size: rem(12);
+    font-family: $english-font-family;
+    color: $green;
+    line-height: 1.5;
+}
+
+.sidebar__article-subtitle {
+    color: $green;
+    margin-top: rem(3);
+}
+
+.sidebar__report-img {
+    margin-top: rem(24);
+    aspect-ratio: 294 / 218;
+
+}
+.sidebar__report-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar__report-item {
+    margin-top: rem(16);
+    font-size: rem(12);
+    color: $green;
+    line-height: 1.5;
+    font-weight: $normal;
+}
+
+.sidebar__report-subtitle {
+    margin-top: rem(8);
+    font-size: rem(24);
+}
+
+.sidebar__report-btn {
+    margin-top: rem(43);
+    text-align: center;
+}
+
+.sidebar__campaign-cards{
+    margin-top: rem(24);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(40);
+}
+
+.sidebar__campaign-card{
+    max-width: rem(600);
+    @include mq(md){
+        max-width: rem(600);
+    }
+}
+
+
+.sidebar__campaign-btn{
+    margin-top: rem(44);
+    text-align: center;
+}
+
+.sidebar__archive-tab{
+    margin-top: rem(27);
+}
+
+.sidebar__archive-accordion summary{
+    font-size: rem(24);
+    color: $green-accent;
+}
+
+.sidebar__archive-accordion-items{
+    margin-left: rem(30);
+}
+
+.sidebar__archive-accordion-item summary{
+    font-size: rem(24);
+    color: $green-accent;
+}
+
+.sidebar__archive-accordion-item+.sidebar__archive-accordion-item{
+    margin-top: rem(4);
+}
