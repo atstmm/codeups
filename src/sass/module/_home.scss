@@ -52,5 +52,9 @@
     }
 }
 
-
+.home__sub{
+    @include mq(md){
+    width: 30%;
+    }
+}
 

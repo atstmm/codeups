@@ -14,10 +14,20 @@
     }
 }
 
+.is-green a{
+    display: inline-block;
+    background: $green-accent;
+    color: $white;
+    padding: rem(5);
+    max-width: rem(162);
+    width: 100%;
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.57142857;
+}
 
-.tabs__list.tabs__list--green a,
-.tabs__list a:hover,
-.tabs__list a:active{
+.tabs__list.is-green a,
+.tabs__list a:hover{
     display: inline-block;
     background: $green-accent;
     color: $white;

@@ -1,5 +1,14 @@
 @use "global" as *;
 
+.sidebar__inner.inner{
+    padding-left: rem(20);
+    padding-right: rem(20);
+    @include mq(md){
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .sidebar__article-cards{
     margin-top: rem(23);
     display: grid;

@@ -24,3 +24,9 @@
         left: calc(50% - min(rem(620),48%));
     }
 }
+
+.page-contact__inner.inner{
+    @include mq(md){
+        max-width: rem(700);
+    }
+}

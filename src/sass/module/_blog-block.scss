@@ -6,12 +6,12 @@
     @include mq(md){
         grid-template-columns: repeat(3,1fr);
         column-gap: rem(40);
+        row-gap: rem(80);
     }
 }
 
 .blog-block--grid{
     @include mq(md){
         grid-template-columns: 1fr 1fr;
-        row-gap: rem(80);
     }
 }

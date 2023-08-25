@@ -98,21 +98,21 @@
 }
 
 /* アクティブなタブ */
-.page-information__tab.current{
+.page-information__tab.is-current{
     background: $green-accent;
     color: $white;
 }
-.page-information__tab.current.page-information__tab-icon1::after{
+.page-information__tab.is-current.page-information__tab-icon1::after{
         @include mq(md){
         background: url(../images/common/page-information/page-information-icon1-w.svg);
     }
 }
-.page-information__tab.current.page-information__tab-icon2::after{
+.page-information__tab.is-current.page-information__tab-icon2::after{
         @include mq(md){
         background: url(../images/common/page-information/page-information-icon2-w.svg);
     }
 }
-.page-information__tab.current.page-information__tab-icon3::after{
+.page-information__tab.is-current.page-information__tab-icon3::after{
         @include mq(md){
         background: url(../images/common/page-information/page-information-icon3-w.svg);
     }
@@ -192,6 +192,3 @@
     }
 }
 
-// .gap4{
-//     grid-column: 1/4;
-// }

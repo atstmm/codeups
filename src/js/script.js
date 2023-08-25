@@ -155,34 +155,155 @@ $(document).ready(function() {
   });
 });
 
-// タブメニュー
+
+//faqアコーディオン
+$(".js-accordion-title").on("click", function() {
+  $(this).next().slideToggle(200);
+  $(this).toggleClass("open",200);
+});
+
+
+
+
+
+
+// footerメニューアンカーリンク information
+
+
+
+
+
+//ページリンク時ヘッダーの高さを持たせる
+
+
 $(function () {
-  // 最初のコンテンツは表示
-  $(".js-content:first-of-type").css("display", "block");
-  // タブをクリックすると
-  $(".js-tab").on("click", function () {
-    // 現在選択されているタブからcurrentを外す
-    $(".current").removeClass("current");
-    // クリックされたタブにcurrentクラスを付与
-    $(this).addClass("current");
-    // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+    var headH = $("header").outerHeight();
+    var animeSpeed = 500;
+    var urlHash = location.hash; //URLのハッシュタグを取得
+    if (urlHash) { //ハッシュタグが有る場合
+        $("body,html").scrollTop(0);
+        setTimeout(function () { //無くてもいいが有ると動作が安定する
+            var target = $(urlHash);
+            var position = target.offset().top - headH;
+            $("body,html").stop().animate({
+                scrollTop: position
+            }, animeSpeed);
+        }, 0);
+    }
+
+  });
+
+$(function () {
+var headH = $("header").outerHeight(); //ヘッダーの高さを取得
+    var animeSpeed = 500; //アニメーションスピード
+    $("a[href^='#']").on({
+        "click": function () {
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href === "" ? "html" : href);
+            var position;
+            position = target.offset().top - headH; //ターゲットまでの距離からヘッダーの高さを引く
+            $("body,html").stop().animate({
+                scrollTop: position
+            }, animeSpeed);
+            return false;
+        }
+    });
+
+  });
+
+
+
+//campaignリンク
+
+$(document).ready(function() {
+  // アーカーリンクのハッシュを取得
+  var hash = window.location.hash;
+  
+  // ハッシュが空でない場合、それに対応するタブを表示
+  if (hash) {
+    // ハッシュから#を取り除いてタブIDとして使用
+    var tabId = hash.substring(1);
+    
+    // タブを非アクティブにする
+    $('.js-tabs').removeClass('is-green');
+    
+    // 対応するタブをアクティブにする
+    $('#' + tabId).addClass('is-green');
+    
+    // 対応するコンテンツを表示する
+    $('.js-contents').hide();
+    $('#' + tabId + '-content').show();
+  } else {
+    // ハッシュがない場合、最初のコンテンツを表示
+    $(".js-contents:first-of-type").css("display", "block");
+  }
+  
+  // タブをクリックすると表示を切り替える処理
+  $(".js-tabs").on("click", function() {
+    var tabId = $(this).attr('id');
+    $('.js-tabs').removeClass('is-green');
+    $(this).addClass('is-green');
+    $('.js-contents').hide();
+    $('#' + tabId + '-content').show();
+  });
+});
+
+
+
+
+
+//indormation tab
+
+$(document).ready(function() {
+  // アーカーリンクのハッシュを取得
+  var hash = window.location.hash;
+  
+  // ハッシュが空でない場合、それに対応するタブを表示
+  if (hash) {
+    // ハッシュから#を取り除いてタブIDとして使用
+    var tabId = hash.substring(1);
+    
+    // タブを非アクティブにする
+    $('.js-tab').removeClass('is-current');
+    
+    // 対応するタブをアクティブにする
+    $('#' + tabId).addClass('is-current');
+    
+    // 対応するコンテンツを表示する
+    $('.js-content').hide();
+    $('#' + tabId + '-content').show();
+
     const index = $(this).index();
-    // コンテンツを非表示にして、クリックしたタブのインデックス番号と同じコンテンツを表示
+   // コンテンツを非表示にして、クリックしたタブのインデックス番号と同じコンテンツを表示
+    $(".js-content").hide().eq(index).fadeIn(300);
+  }
+   else {
+    // ハッシュがない場合、最初のコンテンツを表示
+    $(".js-content:first-of-type").css("display", "block");
+  }
+  
+  // タブをクリックすると表示を切り替える処理
+  $(".js-tab").on("click", function() {
+    var tabId = $(this).attr('id');
+    $('.js-tab').removeClass('is-current');
+    $(this).addClass('is-current');
+    $('.js-content').hide();
+    $('#' + tabId + '-content').show();
+    const index = $(this).index();
+   // コンテンツを非表示にして、クリックしたタブのインデックス番号と同じコンテンツを表示
     $(".js-content").hide().eq(index).fadeIn(300);
   });
 });
 
-//アコーディオン
-$(function () {
-  $(".js-accordion-title").on("click", function() {
-    $(this).next().slideToggle(200);
-    $(this).toggleClass("open",200);
-  });
-});
-
-});
 
 
+
+
+
+
+
+
+});//消さない
 
 
 
