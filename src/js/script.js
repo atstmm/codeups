@@ -167,7 +167,6 @@ $(".js-accordion-title").on("click", function() {
 
 
 
-// footerメニューアンカーリンク information
 
 
 
@@ -252,7 +251,7 @@ $(document).ready(function() {
 
 
 
-//indormation tab
+//information tab
 
 $(document).ready(function() {
   // アーカーリンクのハッシュを取得
@@ -276,6 +275,8 @@ $(document).ready(function() {
     const index = $(this).index();
    // コンテンツを非表示にして、クリックしたタブのインデックス番号と同じコンテンツを表示
     $(".js-content").hide().eq(index).fadeIn(300);
+
+
   }
    else {
     // ハッシュがない場合、最初のコンテンツを表示
